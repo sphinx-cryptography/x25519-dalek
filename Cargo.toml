@@ -1,5 +1,5 @@
 [package]
-name = "x25519-dalek"
+name = "x25519-dalek-ng"
 edition = "2018"
 # Before changing this:
 # - update version in README.md

@@ -1,20 +1,16 @@
-# x25519-dalek  [![](https://img.shields.io/crates/v/x25519-dalek.svg)](https://crates.io/crates/x25519-dalek) [![](https://docs.rs/x25519-dalek/badge.svg)](https://docs.rs/x25519-dalek) [![](https://travis-ci.org/dalek-cryptography/x25519-dalek.svg?branch=master)](https://travis-ci.org/dalek-cryptography/x25519-dalek)
+# x25519-dalek-ng
+
+x25519-dalek-ng is a fork of x25519-dalek.
 
 A pure-Rust implementation of x25519 elliptic curve Diffie-Hellman key exchange,
 with curve operations provided by
-[curve25519-dalek](https://github.com/dalek-cryptography/curve25519-dalek).
+[curve25519-dalek-ng](https://github.com/zkcrypto/curve25519-dalek-ng).
 
 This crate provides two levels of API: a bare byte-oriented `x25519`
 function which matches the function specified in [RFC7748][rfc7748], as
 well as a higher-level Rust API for static and ephemeral Diffie-Hellman.
 
 ## Examples
-
-<a href="https://shop.bubblesort.io">
-<img
-  style="float: right; width: auto; height: 300px;"
-  src="https://raw.githubusercontent.com/dalek-cryptography/x25519-dalek/master/res/bubblesort-zines-secret-messages-cover.jpeg"/>
-</a>
 
 Alice and Bob are two adorable kittens who have lost their mittens, and they
 wish to be able to send secret messages to each other to coordinate finding
@@ -107,24 +103,13 @@ x25519-dalek = "1.1"
 
 # Documentation
 
-Documentation is available [here](https://docs.rs/x25519-dalek).
+Documentation is available [here](https://docs.rs/x25519-dalek-ng).
 
 # Note
 
 This code matches the [RFC7748][rfc7748] test vectors.
 The elliptic curve
-operations are provided by `curve25519-dalek`, which makes a best-effort
+operations are provided by `curve25519-dalek-ng`, which makes a best-effort
 attempt to prevent software side-channels.
 
-"Secret Messages" cover image and [zine](https://shop.bubblesort.io/products/secret-messages-zine)
-copyright © Amy Wibowo ([@sailorhg](https://twitter.com/sailorhg))
-
 [rfc7748]: https://tools.ietf.org/html/rfc7748
-
-# See also
-
-- [crypto_box]: pure Rust public-key authenticated encryption compatible with
-  the NaCl family of encryption libraries (libsodium, TweetNaCl) which uses
-  `x25519-dalek` for key agreement
-
-[crypto_box]: https://github.com/RustCrypto/AEADs/tree/master/crypto_box
