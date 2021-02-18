@@ -53,13 +53,19 @@ impl PublicKey {
         self.0.as_bytes()
     }
 
-    /// Perform a bliding operation on the public key with
+    /// Perform a blinding operation on the public key with
     /// the given blinding factor.
     pub fn blind(&mut self, blinding_factor: [u8; 32]) {
         self.0 = clamp_scalar(blinding_factor) * self.0;
     }
 
-    /// Perform a bliding operation on the public key with
+    /// Perform a blinding operation on the public key with
+    /// the given blinding factor.
+    pub fn to_blind(&self, blinding_factor: [u8; 32]) -> PublicKey {
+        PublicKey(clamp_scalar(blinding_factor) * self.0)
+    }
+
+    /// Perform a blinding operation on the public key with
     /// the given blinding factor.
     pub fn blind_with_scalar(&mut self, blinding_factor: Scalar) {
         self.0 = blinding_factor * self.0;
