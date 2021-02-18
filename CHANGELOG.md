@@ -2,6 +2,12 @@
 
 Entries are listed in reverse chronological order.
 
+## 1.2.0
+
+* Make use of curve25519-dalek-ng instead of curve25519-dalek (by @david415)
+* Add zeroize on drop for `PublicKey` (by @david415)
+* Add blinding operations for `PublicKey` (by @david415)
+
 ## 1.1.0
 
 * Add impls of `PartialEq`, `Eq`, and `Hash` for `PublicKey` (by @jack-michaud)
